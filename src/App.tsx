@@ -1,24 +1,28 @@
 import "./App.css";
-import Header from "./components/Header";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Section/Home";
-import Skills from "./components/Section/Skills";
+import AllPortfolio from "./components/Page/AllPortfolio";
 
 function App() {
   return (
-    <div className="app-container px-[10rem]">
-      <div className="background-gradient">
-        {/* Clean circular gradient orbs */}
-        <div className="gradient-orb orb-1"></div>
-        <div className="gradient-orb orb-2"></div>
-        <div className="gradient-orb orb-3"></div>
-        <div className="gradient-orb orb-4"></div>
-      </div>
+    <Router>
+      <div className="app-container px-[10rem]">
+        <div className="background-gradient">
+          {/* Clean circular gradient orbs */}
+          <div className="gradient-orb orb-1"></div>
+          <div className="gradient-orb orb-2"></div>
+          <div className="gradient-orb orb-3"></div>
+          <div className="gradient-orb orb-4"></div>
+        </div>
 
-      <div className="content-wrapper z- relative">
-        <Header />
-        <Home />
+        <div className="content-wrapper z- relative">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/portfolio" element={<AllPortfolio />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
