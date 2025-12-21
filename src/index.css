@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    width: 100%;
+    min-height: 100vh;
+    background: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-family: "Poppins", sans-serif;
+    @apply text-[3rem] font-bold leading-tight tracking-normal;
+  }
+  h2 {
+    font-family: "Poppins", sans-serif;
+    @apply text-[2rem] font-bold leading-tight tracking-normal;
+  }
+  h3 {
+    font-family: "Poppins", sans-serif;
+    @apply text-[1.5rem] font-bold leading-tight tracking-normal;
+  }
+  h4 {
+    font-family: "Poppins", sans-serif;
+    @apply text-[1rem] font-bold leading-tight tracking-normal;
+  }
+  h5 {
+    font-family: "Poppins", sans-serif;
+    @apply text-[0.5rem] font-bold leading-tight tracking-normal;
+  }
+  h6 {
+    font-family: "Poppins", sans-serif;
+    @apply text-[0.25rem] font-bold leading-tight tracking-normal;
+  }
+
+  p {
+    font-family: "Nunito", sans-serif;
+    @apply text-lg leading-normal;
+  }
+}
+
+@layer utilities {
+  .about-me-text-custom {
+    @apply text-center text-base lg:text-left;
+  }
+}
