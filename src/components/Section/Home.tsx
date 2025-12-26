@@ -4,6 +4,8 @@ import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 import Header from "../Header";
 
+import profile from "../../../public/assets/kassey-profile.jpg";
+
 const Home = () => {
   return (
     <>
@@ -32,8 +34,12 @@ const Home = () => {
           </div>
           {/* Profile Image Section */}
           <div>
-            <div className="h-[200px] w-[200px] rounded-full bg-white/10"></div>
-            {/* <img src={profile} alt="profile" /> */}
+            {/* <div className="h-[200px] w-[200px] rounded-full bg-white/10"></div> */}
+            <img
+              src={profile}
+              alt="profile"
+              className="h-[350px] w-[350px] rounded-full"
+            />
           </div>
         </section>
 

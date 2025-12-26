@@ -12,6 +12,13 @@ const AllPortfolio = () => {
     if (activeFilter === "All") {
       return portfolioItems;
     }
+    if (activeFilter === "AI/NoCode") {
+      return portfolioItems.filter((item) =>
+        item.category.some(
+          (cat) => cat === "AI" || cat === "Low-Code" || cat === "No-Code",
+        ),
+      );
+    }
     return portfolioItems.filter((item) =>
       item.category.includes(activeFilter),
     );
@@ -44,9 +51,14 @@ const AllPortfolio = () => {
 
         {/* Portfolio Grid */}
         {filteredItems.length > 0 ? (
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {filteredItems.map((item) => (
-              <PortfolioCard key={item.id} {...item} />
+              <PortfolioCard
+                key={item.id}
+                {...item}
+                useLongDescription={true}
+                lineClamp={7}
+              />
             ))}
           </div>
         ) : (
