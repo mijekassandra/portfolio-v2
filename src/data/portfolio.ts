@@ -26,7 +26,7 @@ export const portfolioItems: PortfolioItem[] = [
     longDescription:
       "This system helps Community SK leaders manage their youth organization better. It tracks member information, schedules activities, and keeps records of community projects. The interface is simple and works on phones and computers. Leaders can add new members, plan events, and see reports on their activities.",
     images: ["/assets/MSK-Dashboard.png", "/assets/kassey-profile.jpg"],
-    githubUrl: "",
+    githubUrl: "https://github.com/mijekassandra/msk-frontend",
     colors: {
       primary: "bg-[var(--primary-dark)]",
       secondary: "bg-[var(--secondary-main)]",
@@ -43,7 +43,7 @@ export const portfolioItems: PortfolioItem[] = [
     longDescription:
       "This system helps community health workers keep track of residents' health information. They can record check-ups, schedule vaccinations, and manage health programs. The system stores patient records safely and helps health workers remember appointments and follow-ups. It makes health services more organized and accessible to the community.",
     images: ["/assets/MedAccess.png", "/assets/kassey-profile.jpg"],
-    githubUrl: "",
+    githubUrl: "https://github.com/mijekassandra/med-access-frontend",
     colors: {
       primary: "bg-[var(--secondary-main)]",
       secondary: "bg-[var(--primary-dark)]",
@@ -64,7 +64,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/assets/global-2.png",
       "/assets/global-3.png",
     ],
-    githubUrl: "",
+    githubUrl: "https://github.com/mijekassandra/global-components",
     colors: {
       primary: "bg-[var(--secondary-main)]",
       secondary: "bg-[var(--primary-dark)]",

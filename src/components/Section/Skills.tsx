@@ -96,18 +96,18 @@ const Skills = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center gap-12 py-12">
-      <div className="space-y-4 text-center">
-        <h2 className="bg-gradient-to-r from-white to-white/70 bg-clip-text text-4xl font-bold text-transparent">
+    <div className="flex flex-col items-center justify-center gap-8 py-8 sm:gap-10 sm:py-10 md:gap-12 md:py-12">
+      <div className="space-y-3 text-center sm:space-y-4">
+        <h2 className="bg-gradient-to-r from-white to-white/70 bg-clip-text text-2xl font-bold text-transparent sm:text-3xl md:text-4xl">
           Skills and Tech Stacks
         </h2>
-        <p className="max-w-2xl text-white/90">
+        <p className="max-w-2xl px-4 text-sm text-white/90 sm:px-0 sm:text-base">
           Technologies and tools I use to build modern, scalable, and beautiful
           web applications
         </p>
       </div>
 
-      <div className="grid w-full grid-cols-2 gap-8 md:grid-cols-4">
+      <div className="grid w-full grid-cols-2 gap-4 sm:gap-6 md:grid-cols-4 md:gap-8">
         {techStacks.map((stack, index) => {
           const isLastTwo = index >= techStacks.length - 2;
           const isOddLastRow = techStacks.length % 4 === 2 && isLastTwo;

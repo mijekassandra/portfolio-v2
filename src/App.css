@@ -128,3 +128,119 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none; /* Chrome, Safari and Opera */
 }
+
+/* Interactive Profile Image Styles */
+.profile-image-container {
+  perspective: 1000px;
+}
+
+.profile-image-wrapper {
+  position: relative;
+  animation: floatProfile 6s ease-in-out infinite;
+}
+
+.profile-image {
+  object-fit: cover;
+  cursor: pointer;
+  filter: brightness(1);
+  transition:
+    filter 0.3s ease,
+    transform 0.1s ease-out;
+  box-shadow:
+    0 0 30px rgba(255, 140, 0, 0.3),
+    0 0 60px rgba(59, 130, 246, 0.2);
+}
+
+.profile-border {
+  background: conic-gradient(
+    from 0deg,
+    rgba(255, 140, 0, 0.9),
+    rgba(59, 130, 246, 0.9),
+    rgba(139, 92, 246, 0.9),
+    rgba(255, 140, 0, 0.9)
+  );
+  animation: rotateBorder 8s linear infinite;
+  z-index: 5;
+  padding: 4px;
+}
+
+.profile-border-inner {
+  z-index: 6;
+  background: #000000;
+}
+
+.profile-glow {
+  background: radial-gradient(
+    circle,
+    rgba(255, 140, 0, 0.4) 0%,
+    rgba(59, 130, 246, 0.3) 30%,
+    rgba(139, 92, 246, 0.2) 60%,
+    transparent 100%
+  );
+  filter: blur(30px);
+  pointer-events: none;
+  transition:
+    opacity 0.5s ease,
+    transform 0.1s ease-out;
+}
+
+@keyframes floatProfile {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+/* Enhanced hover effects */
+.profile-image-container:hover .profile-image {
+  transform: scale(1.05) !important;
+  box-shadow:
+    0 0 40px rgba(255, 140, 0, 0.5),
+    0 0 80px rgba(59, 130, 246, 0.4),
+    0 0 120px rgba(139, 92, 246, 0.3);
+}
+
+.profile-image-container:hover .profile-glow {
+  filter: blur(40px);
+  opacity: 0.8 !important;
+}
+
+.profile-image-container:hover .profile-border {
+  animation-duration: 4s;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .profile-image {
+    transform: none !important;
+  }
+
+  .profile-glow {
+    transform: none !important;
+  }
+}

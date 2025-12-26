@@ -55,11 +55,11 @@ const Contact = () => {
       </div>
 
       {/* Header Section */}
-      <div className="mb-16 space-y-4">
-        <h1 className="bg-gradient-to-r from-white to-white/70 bg-clip-text font-bold text-transparent">
+      <div className="mb-10 space-y-3 sm:mb-12 sm:space-y-4 md:mb-16">
+        <h1 className="bg-gradient-to-r from-white to-white/70 bg-clip-text text-2xl font-bold text-transparent sm:text-3xl md:text-4xl">
           Get In Touch.
         </h1>
-        <p className="max-w-2xl text-white/70">
+        <p className="max-w-2xl text-sm text-white/70 sm:text-base">
           Feel free to reach out if you'd like to collaborate or just want to
           say hello. I'm always open to discussing new projects and
           opportunities.
@@ -67,7 +67,7 @@ const Contact = () => {
       </div>
 
       {/* Contact Cards */}
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 md:grid-cols-3">
         {contactInfo.map((info) => {
           const IconComponent = info.icon;
           return (
@@ -75,7 +75,7 @@ const Contact = () => {
               key={info.id}
               variant="elevated"
               hover
-              className="group relative overflow-hidden p-8 transition-all duration-500"
+              className="group relative overflow-hidden p-6 transition-all duration-500 sm:p-7 md:p-8"
             >
               {/* Gradient overlay on hover */}
               <div
@@ -87,30 +87,30 @@ const Contact = () => {
                 className={`absolute inset-0 rounded-2xl border-2 ${info.borderColor} opacity-0 transition-opacity duration-500 group-hover:opacity-100`}
               />
 
-              <div className="relative z-10 flex flex-col items-start gap-6">
+              <div className="relative z-10 flex flex-col items-start gap-4 sm:gap-5 md:gap-6">
                 {/* Icon with animated background */}
                 <div
-                  className={`flex h-16 w-16 items-center justify-center rounded-2xl ${info.iconBg} transition-all duration-500 group-hover:scale-110 group-hover:shadow-xl group-hover:shadow-black/30`}
+                  className={`flex h-12 w-12 items-center justify-center rounded-2xl sm:h-14 sm:w-14 md:h-16 md:w-16 ${info.iconBg} transition-all duration-500 group-hover:scale-110 group-hover:shadow-xl group-hover:shadow-black/30`}
                 >
                   <IconComponent
-                    className={`text-3xl ${info.iconColor} transition-all duration-500 group-hover:scale-110`}
+                    className={`text-2xl sm:text-2xl md:text-3xl ${info.iconColor} transition-all duration-500 group-hover:scale-110`}
                   />
                 </div>
 
                 {/* Content */}
-                <div className="space-y-2">
-                  <h3 className="text-xl font-semibold tracking-wide text-white/90 transition-colors duration-300 group-hover:text-white">
+                <div className="space-y-1.5 sm:space-y-2">
+                  <h3 className="text-lg font-semibold tracking-wide text-white/90 transition-colors duration-300 group-hover:text-white sm:text-xl">
                     {info.label}
                   </h3>
                   {info.link ? (
                     <a
                       href={info.link}
-                      className="block text-base text-white/70 transition-all duration-300 hover:text-white hover:underline hover:underline-offset-4"
+                      className="block text-sm text-white/70 transition-all duration-300 hover:text-white hover:underline hover:underline-offset-4 sm:text-base"
                     >
                       {info.value}
                     </a>
                   ) : (
-                    <p className="text-base text-white/70 transition-colors duration-300 group-hover:text-white/90">
+                    <p className="text-sm text-white/70 transition-colors duration-300 group-hover:text-white/90 sm:text-base">
                       {info.value}
                     </p>
                   )}

@@ -27,18 +27,18 @@ const AllPortfolio = () => {
   return (
     <>
       <Header />
-      <div className="flex flex-col gap-12 py-12">
-        <h1 className="bg-gradient-to-r from-white to-white/70 bg-clip-text font-bold text-transparent">
+      <div className="flex flex-col gap-6 py-6 sm:gap-8 sm:py-8 md:gap-12 md:py-12">
+        <h1 className="bg-gradient-to-r from-white to-white/70 bg-clip-text text-2xl font-bold text-transparent sm:text-3xl md:text-4xl">
           All Portfolio
         </h1>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
           {filters.map((filter) => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`rounded-lg px-6 py-2 text-sm font-medium transition-all duration-300 ${
+              className={`rounded-lg px-4 py-1.5 text-xs font-medium transition-all duration-300 sm:px-5 sm:py-2 sm:text-sm md:px-6 ${
                 activeFilter === filter
                   ? "bg-white/20 text-white shadow-lg backdrop-blur-sm"
                   : "bg-white/10 text-white/70 backdrop-blur-sm hover:bg-white/15 hover:text-white"
@@ -51,7 +51,7 @@ const AllPortfolio = () => {
 
         {/* Portfolio Grid */}
         {filteredItems.length > 0 ? (
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:gap-8">
             {filteredItems.map((item) => (
               <PortfolioCard
                 key={item.id}
@@ -62,7 +62,7 @@ const AllPortfolio = () => {
             ))}
           </div>
         ) : (
-          <div className="py-12 text-center text-white/70">
+          <div className="py-8 text-center text-sm text-white/70 sm:py-12 sm:text-base">
             No portfolio items found for this category.
           </div>
         )}

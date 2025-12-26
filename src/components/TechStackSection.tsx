@@ -39,7 +39,7 @@ const TechStackSection: React.FC<TechStackSectionProps> = ({
   return (
     <div className="group cursor-pointer">
       <HoverGlassCard
-        className={`relative flex min-h-[180px] items-center justify-center overflow-hidden p-6 ${
+        className={`relative flex min-h-[140px] items-center justify-center overflow-hidden p-4 sm:min-h-[160px] sm:p-5 md:min-h-[180px] md:p-6 ${
           // Default: completely plain, no styling
           ""
         } ${
@@ -47,20 +47,20 @@ const TechStackSection: React.FC<TechStackSectionProps> = ({
           `group-hover:bg-gradient-to-br group-hover:backdrop-blur-xl ${colorStyles[colorVariant]} group-hover:border group-hover:shadow-lg group-hover:shadow-black/20`
         }`}
       >
-        <div className="flex h-full flex-col items-center justify-center gap-6">
+        <div className="flex h-full flex-col items-center justify-center gap-4 sm:gap-5 md:gap-6">
           {/* Circular Icon Background */}
           <div
-            className={`flex h-14 w-14 items-center justify-center rounded-full ${iconBgStyles[colorVariant]} transition-all duration-500 group-hover:scale-110 group-hover:shadow-lg`}
+            className={`flex h-10 w-10 items-center justify-center rounded-full sm:h-12 sm:w-12 md:h-14 md:w-14 ${iconBgStyles[colorVariant]} transition-all duration-500 group-hover:scale-110 group-hover:shadow-lg`}
           >
             <div
-              className={`${iconColorStyles[colorVariant]} text-[1.25rem] transition-transform duration-300 group-hover:scale-110`}
+              className={`${iconColorStyles[colorVariant]} text-lg transition-transform duration-300 sm:text-xl md:text-[1.25rem] group-hover:scale-110`}
             >
               {icon}
             </div>
           </div>
 
           {/* Title */}
-          <h3 className="text-center text-[1.15rem] font-semibold tracking-wider text-white transition-colors duration-300 group-hover:text-white">
+          <h3 className="text-center text-sm font-semibold tracking-wider text-white transition-colors duration-300 sm:text-base md:text-[1.15rem] group-hover:text-white">
             {title}
           </h3>
         </div>

@@ -94,16 +94,16 @@ const About = () => {
 
       <h1
         ref={titleRef}
-        className={`mb-12 font-bold transition-all duration-700 ${
+        className={`mb-8 text-2xl font-bold transition-all duration-700 sm:mb-10 sm:text-3xl md:mb-12 md:text-4xl ${
           titleVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
         }`}
       >
         About Me.
       </h1>
 
-      <div className="relative flex flex-col gap-16">
+      <div className="relative flex flex-col gap-8 sm:gap-12 md:gap-16">
         {/* Vertical connecting line */}
-        <div className="absolute bottom-6 left-[7px] top-6 w-0.5 bg-white opacity-30"></div>
+        <div className="absolute bottom-6 left-[5px] top-6 block w-0.5 bg-white opacity-30 sm:left-[7px]"></div>
 
         <div
           ref={section1Ref}
@@ -115,8 +115,6 @@ const About = () => {
         >
           <AboutSection
             title="Introduction"
-            linkText="View Profile"
-            linkHref="#"
             content={
               <>
                 I'm a developer based in the{" "}
@@ -146,8 +144,6 @@ const About = () => {
         >
           <AboutSection
             title="Frontend Development"
-            linkText="View Projects"
-            linkHref="#"
             content={
               <>
                 This is my main thing — where I spend most of my time and what I
@@ -174,8 +170,6 @@ const About = () => {
         >
           <AboutSection
             title="Backend Development"
-            linkText="View Code"
-            linkHref="#"
             content={
               <>
                 I've worked on{" "}
@@ -201,8 +195,6 @@ const About = () => {
         >
           <AboutSection
             title="AI/No code"
-            linkText="View Code"
-            linkHref="#"
             content={
               <>
                 I've built complete apps from start to finish using{" "}
@@ -231,8 +223,6 @@ const About = () => {
         >
           <AboutSection
             title="UX/UI Design"
-            linkText="View Designs"
-            linkHref="#"
             content={
               <>
                 I also do{" "}
