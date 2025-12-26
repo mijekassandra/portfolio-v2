@@ -18,10 +18,10 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 mb-8">
-      <nav className="flex items-center justify-between py-4">
+      <nav className="flex items-center justify-between py-6 font-heading">
         {/* Logo placeholder - you can add your logo here */}
-        <Link to="/" className="font-heading text-xl font-bold text-white">
-          Portfolio
+        <Link to="/" className="text-xl font-bold text-white">
+          KCM.
         </Link>
 
         {/* Navigation items */}
@@ -32,8 +32,8 @@ const Header = () => {
                 to={item.path}
                 className={`rounded-lg px-4 py-2 transition-all duration-300 ${
                   isActive(item.path)
-                    ? "bg-white/10 text-white backdrop-blur-sm"
-                    : "text-white/70 hover:bg-white/5 hover:text-white"
+                    ? "bg-white/10 font-semibold text-white backdrop-blur-sm"
+                    : "font-medium text-white/70 hover:bg-white/5 hover:text-white"
                 }`}
               >
                 {item.label}
