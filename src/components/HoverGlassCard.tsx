@@ -1,20 +1,21 @@
-import { ReactNode } from "react";
+import React from "react";
 
 interface HoverGlassCardProps {
-  children: ReactNode;
+  children: React.ReactNode;
   className?: string;
 }
 
-const HoverGlassCard = ({ 
-  children, 
-  className = ""
-}: HoverGlassCardProps) => {
+const HoverGlassCard: React.FC<HoverGlassCardProps> = ({
+  children,
+  className = "",
+}) => {
   return (
-    <div className={`rounded-2xl transition-[background,backdrop-filter,shadow] duration-500 transition-[border-color,border-width] duration-0 ${className}`}>
+    <div
+      className={`rounded-2xl transition-[background,backdrop-filter,shadow,border-color,border-width] duration-500 ${className}`}
+    >
       {children}
     </div>
   );
 };
 
 export default HoverGlassCard;
-

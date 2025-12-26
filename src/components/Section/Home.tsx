@@ -5,7 +5,7 @@ import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 import Header from "../Header";
 
-import profile from "../../../public/assets/kassey-profile.jpg";
+import profile from "/assets/kassey-profile.jpg";
 
 const Home = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
