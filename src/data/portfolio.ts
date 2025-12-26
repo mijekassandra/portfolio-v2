@@ -25,7 +25,12 @@ export const portfolioItems: PortfolioItem[] = [
       "A management system for Community SK (Sangguniang Kabataan) that helps organize youth activities, track members, and manage community projects. Built with React and TypeScript for easy use.",
     longDescription:
       "This system helps Community SK leaders manage their youth organization better. It tracks member information, schedules activities, and keeps records of community projects. The interface is simple and works on phones and computers. Leaders can add new members, plan events, and see reports on their activities.",
-    images: ["/assets/MSK-Dashboard.png", "/assets/kassey-profile.jpg"],
+    images: [
+      "/assets/MSK-Dashboard.png",
+      "/assets/MSK-Profile.png",
+      "/assets/msk-announcement.png",
+      "/assets/msk-files.png",
+    ],
     githubUrl: "https://github.com/mijekassandra/msk-frontend",
     colors: {
       primary: "bg-[var(--primary-dark)]",
@@ -42,7 +47,13 @@ export const portfolioItems: PortfolioItem[] = [
       "A health management system for community to track residents' health records, schedule check-ups, and manage health programs. Helps health workers organize their work better.",
     longDescription:
       "This system helps community health workers keep track of residents' health information. They can record check-ups, schedule vaccinations, and manage health programs. The system stores patient records safely and helps health workers remember appointments and follow-ups. It makes health services more organized and accessible to the community.",
-    images: ["/assets/MedAccess.png", "/assets/kassey-profile.jpg"],
+    images: [
+      "/assets/med-dashboard.png",
+      "/assets/med-services.png",
+      "/assets/med-announcements.png",
+      "/assets/med-users.png",
+      "/assets/med-records.png",
+    ],
     githubUrl: "https://github.com/mijekassandra/med-access-frontend",
     colors: {
       primary: "bg-[var(--secondary-main)]",
