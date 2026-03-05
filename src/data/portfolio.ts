@@ -61,6 +61,43 @@ export const portfolioItems: PortfolioItem[] = [
     },
     featured: true,
   },
+
+  {
+    id: 11,
+    title: "Dental Clinic Landing Page",
+    category: ["Frontend"],
+    skills: ["HTML", "CSS", "JavaScript"],
+    description:
+      "Practice project: a simple landing page for a dental clinic that showcases their services and team.",
+    longDescription:
+      "This is a practice project—a simple landing page for a dental clinic that showcases their services and team. The landing page is designed to be simple and easy to use, with a focus on showcasing the services and team.",
+    githubUrl: "https://github.com/mijekassandra/BrightCare-Dental",
+    liveUrl: "https://bright-care-dental.vercel.app//",
+    colors: {
+      primary: "bg-[var(--primary-dark)]",
+      secondary: "bg-[var(--secondary-main)]",
+    },
+    featured: true,
+    images: ["/assets/brightcare-landing.png"],
+  },
+  {
+    id: 12,
+    title: "Furniture Store Landing Page",
+    category: ["Frontend"],
+    skills: ["HTML", "CSS", "JavaScript"],
+    description:
+      "Practice project: a simple landing page for a furniture store that showcases their products and team.",
+    longDescription:
+      "This is a practice project—a simple landing page for a furniture store that showcases their products.",
+    githubUrl: "https://github.com/mijekassandra/Furni-Store",
+    liveUrl: "https://furni-store-tau.vercel.app/",
+    colors: {
+      primary: "bg-[var(--primary-dark)]",
+      secondary: "bg-[var(--secondary-main)]",
+    },
+    featured: true,
+    images: ["/assets/furni-landing.png"],
+  },
   {
     id: 3,
     title: "Design System Component Library",
@@ -80,7 +117,7 @@ export const portfolioItems: PortfolioItem[] = [
       primary: "bg-[var(--secondary-main)]",
       secondary: "bg-[var(--primary-dark)]",
     },
-    featured: true,
+    featured: false,
   },
   {
     id: 4,
