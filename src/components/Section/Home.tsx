@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import About from "./About";
 import Skills from "./Skills";
+import Certifications from "./Certifications";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 import Header from "../Header";
@@ -98,6 +99,11 @@ const Home = () => {
         {/* Tech Stacks Section */}
         <section id="tech-stacks">
           <Skills />
+        </section>
+
+        {/* Certifications Section */}
+        <section id="certifications">
+          <Certifications />
         </section>
 
         {/* Portfolio Section */}

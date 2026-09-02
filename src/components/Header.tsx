@@ -4,7 +4,7 @@ interface NavItem {
   id: string;
   label: string;
   path: string;
-  isDownload?: boolean;
+  isExternal?: boolean;
 }
 
 const Header = () => {
@@ -13,7 +13,12 @@ const Header = () => {
   const navItems: NavItem[] = [
     { id: "home", label: "Home", path: "/" },
     { id: "portfolio", label: "Portfolio", path: "/portfolio" },
-    { id: "resume", label: "Resume", path: "/resume", isDownload: true },
+    {
+      id: "resume",
+      label: "Resume",
+      path: "/assets/Resume_Mije_Kassandra.pdf",
+      isExternal: true,
+    },
   ];
 
   const isActive = (path: string) => {
@@ -21,15 +26,6 @@ const Header = () => {
       return location.pathname === "/";
     }
     return location.pathname.startsWith(path);
-  };
-
-  const handleResumeDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/assets/Resume_Mije_Kassandra.pdf";
-    link.download = "Resume_Mije_Kassandra.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
   };
 
   return (
@@ -44,13 +40,15 @@ const Header = () => {
         <ul className="flex items-center gap-2 sm:gap-4 md:gap-6">
           {navItems.map((item) => (
             <li key={item.id}>
-              {item.isDownload ? (
-                <button
-                  onClick={handleResumeDownload}
-                  className={`rounded-lg px-2 py-1.5 text-xs transition-all duration-300 sm:px-3 sm:py-2 sm:text-sm md:px-4 font-medium text-white/70 hover:bg-white/5 hover:text-white`}
+              {item.isExternal ? (
+                <a
+                  href={item.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-lg px-2 py-1.5 text-xs font-medium text-white/70 transition-all duration-300 hover:bg-white/5 hover:text-white sm:px-3 sm:py-2 sm:text-sm md:px-4"
                 >
                   {item.label}
-                </button>
+                </a>
               ) : (
                 <Link
                   to={item.path}

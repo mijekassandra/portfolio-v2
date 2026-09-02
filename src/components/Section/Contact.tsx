@@ -6,9 +6,9 @@ const Contact = () => {
     {
       id: "email",
       label: "Email",
-      value: "kassandramije@gmail.com",
+      value: "mijekassandra@gmail.com",
       icon: HiMail,
-      link: "mailto:kassandramije@gmail.com",
+      link: "mailto:mijekassandra@gmail.com",
       gradient: "from-blue-500/20 via-blue-500/10 to-transparent",
       iconBg: "bg-blue-500/10 group-hover:bg-blue-500/20",
       iconColor: "text-blue-400",

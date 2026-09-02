@@ -8,6 +8,8 @@ const About = () => {
   const section3Ref = useRef<HTMLDivElement>(null);
   const section4Ref = useRef<HTMLDivElement>(null);
   const section5Ref = useRef<HTMLDivElement>(null);
+  const section6Ref = useRef<HTMLDivElement>(null);
+  const section7Ref = useRef<HTMLDivElement>(null);
 
   const [titleVisible, setTitleVisible] = useState(false);
   const [section1Visible, setSection1Visible] = useState(false);
@@ -15,6 +17,8 @@ const About = () => {
   const [section3Visible, setSection3Visible] = useState(false);
   const [section4Visible, setSection4Visible] = useState(false);
   const [section5Visible, setSection5Visible] = useState(false);
+  const [section6Visible, setSection6Visible] = useState(false);
+  const [section7Visible, setSection7Visible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -41,6 +45,12 @@ const About = () => {
               case "section5":
                 setSection5Visible(true);
                 break;
+              case "section6":
+                setSection6Visible(true);
+                break;
+              case "section7":
+                setSection7Visible(true);
+                break;
             }
           }
         });
@@ -58,6 +68,8 @@ const About = () => {
       { ref: section3Ref, id: "section3" },
       { ref: section4Ref, id: "section4" },
       { ref: section5Ref, id: "section5" },
+      { ref: section6Ref, id: "section6" },
+      { ref: section7Ref, id: "section7" },
     ];
 
     refs.forEach(({ ref, id }) => {
@@ -194,6 +206,34 @@ const About = () => {
           }`}
         >
           <AboutSection
+            title="Cloud"
+            content={
+              <>
+                I've contributed to a{" "}
+                <span className="text-primary underline decoration-[1px] underline-offset-4">
+                  CCaaS (Contact Center as a Service)
+                </span>{" "}
+                team, developing and maintaining{" "}
+                <span className="text-primary underline decoration-[1px] underline-offset-4">
+                  Amazon Connect
+                </span>{" "}
+                integrations, workflows, and related application features. That
+                work deepened my understanding of cloud services and how
+                real-world systems connect across platforms.
+              </>
+            }
+          />
+        </div>
+
+        <div
+          ref={section5Ref}
+          className={`transition-all duration-700 ${
+            section5Visible
+              ? "translate-y-0 opacity-100"
+              : "translate-y-8 opacity-0"
+          }`}
+        >
+          <AboutSection
             title="AI/No code"
             content={
               <>
@@ -214,9 +254,9 @@ const About = () => {
         </div>
 
         <div
-          ref={section5Ref}
+          ref={section6Ref}
           className={`transition-all duration-700 ${
-            section5Visible
+            section6Visible
               ? "translate-y-0 opacity-100"
               : "translate-y-8 opacity-0"
           }`}
@@ -233,6 +273,37 @@ const About = () => {
                 designs into actual code without losing what the designer
                 intended, and I can work better with designers since I
                 understand both sides of the process.
+              </>
+            }
+          />
+        </div>
+
+        <div
+          ref={section7Ref}
+          className={`transition-all duration-700 ${
+            section7Visible
+              ? "translate-y-0 opacity-100"
+              : "translate-y-8 opacity-0"
+          }`}
+        >
+          <AboutSection
+            title="Outside of Work"
+            content={
+              <>
+                When I'm not coding, I love being outdoors — whether that's{" "}
+                <span className="text-primary underline decoration-[1px] underline-offset-4">
+                  camping
+                </span>
+                , going on a{" "}
+                <span className="text-primary underline decoration-[1px] underline-offset-4">
+                  hike
+                </span>
+                , or spending a day at the{" "}
+                <span className="text-primary underline decoration-[1px] underline-offset-4">
+                  beach
+                </span>
+                . Getting outside helps me reset, stay curious, and come back
+                to work with a clearer head.
               </>
             }
           />

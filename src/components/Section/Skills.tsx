@@ -14,7 +14,9 @@ import {
   SiGithub,
   SiReplit,
   SiCloudflare,
+  SiClaude,
 } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
 
 const Skills = () => {
   const techStacks = [
@@ -71,6 +73,11 @@ const Skills = () => {
       icon: <SiMysql />,
       colorVariant: "blue" as const,
     },
+    {
+      title: "AWS",
+      icon: <FaAws />,
+      colorVariant: "yellow" as const,
+    },
 
     // Additional Technologies
     {
@@ -92,6 +99,11 @@ const Skills = () => {
       title: "Replit",
       icon: <SiReplit />,
       colorVariant: "yellow" as const,
+    },
+    {
+      title: "Claude",
+      icon: <SiClaude />,
+      colorVariant: "purple" as const,
     },
   ];
 
